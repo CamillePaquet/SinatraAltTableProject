@@ -20,6 +20,6 @@ class RestService
     @browser = Rack::Test::Session.new(Rack::MockSession.new(@service))
   end
   
-    def_delegators :@browser, :get, :post, :put, :delete
+    def_delegators :@browser, :get, :post, :put, :delete, :patch
 
 end
