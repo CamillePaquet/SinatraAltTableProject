@@ -16,6 +16,6 @@ end
 
 Rake::TestTask.new do |t|
     test_dir = "organisation_carte/spec"
-	t.pattern = "organisation_carte/services/units_tests/*_unitaire.rb"
+	t.pattern = "organisation_carte/services/units_tests/tests_*.rb"
 end
 
