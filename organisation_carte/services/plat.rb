@@ -1,5 +1,5 @@
 class Plat
-    attr_accessor :nom, :type, :description, :prix, :quantite
+    attr_accessor :nom, :type, :description, :quantite, :prix
     
     def initialize(options = {})
         options[:nom] ? @nom = options[:nom] : @nom=nil

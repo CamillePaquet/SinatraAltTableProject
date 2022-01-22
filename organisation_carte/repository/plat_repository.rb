@@ -29,15 +29,6 @@ module Sample
                 end
             end
 
-            def plat_par_nom nom
-                begin
-                    plat = Sample::Models::Plat.find_by(nom: nom)
-                    return plat  
-                rescue Mongoid::Errors::DocumentNotFound 
-                    return "NOT_FOUND"
-                end
-            end
-
             def modification_quantite_repertoire options = {}
                 begin
                     plat = Sample::Models::Plat.find_by(nom: options[:nom])
