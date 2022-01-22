@@ -1,7 +1,7 @@
 # coding: utf-8
 require_relative 'prepare'
 
-describe 'Plat REST API' do
+describe 'Organisation Carte REST API' do
   before :all do
     Mongoid.purge!
     $service = RestService::new :service => Sample::Backend
