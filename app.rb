@@ -2,11 +2,13 @@ require 'rubygems'
 require 'sinatra'
 require 'mongoid'
 require 'sinatra/namespace'
-require_relative 'organisation_carte/controller/helpers/init'
+require_relative 'helpers/init'
 require_relative 'organisation_carte/repository/init'
 require_relative 'organisation_carte/models/init'
 require_relative 'organisation_carte/services/init'
-
+require_relative 'gestion_commandes/repository/init'
+require_relative 'gestion_commandes/models/init'
+require_relative 'gestion_commandes/services/init'
 
 module Sample
   class Sample::Backend < Sinatra::Base
@@ -23,3 +25,4 @@ module Sample
 end
 
 require_relative 'organisation_carte/controller/init'
+require_relative 'gestion_commandes/controller/init'
