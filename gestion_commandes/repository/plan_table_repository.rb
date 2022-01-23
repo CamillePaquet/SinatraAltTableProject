@@ -17,18 +17,6 @@ module Sample
                 end
             end
 
-            def ajout_table_plan_table options = {}
-                begin
-                    planTable = Sample::Models::PlanTable.find_by(nom: options[:nom])
-                    planTable.update_attributes!(
-                        tables: options[:tables]
-                    )
-                    plat.save!
-                    return "UPDATED"
-                rescue Mongoid::Errors::DocumentNotFound 
-                    return "NOT_FOUND"
-                end
-            end
 
             def plan_table_existe_par_nom? nom
                 begin

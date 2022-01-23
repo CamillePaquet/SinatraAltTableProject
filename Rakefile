@@ -11,11 +11,19 @@ require 'rake/testtask'
 RSpec::Core::RakeTask.new do |task|
     test_dir = "organisation_carte/spec"
     task.pattern = "#{test_dir}/*_spec.rb"
+    verbose = false
+end
+
+RSpec::Core::RakeTask.new do |task|
+    test_dir = "gestion_commandes/spec"
+    task.pattern = "#{test_dir}/*_spec.rb"
+    verbose = false
 end
 
 
+
+
 Rake::TestTask.new do |t|
-    test_dir = "organisation_carte/spec"
-	t.pattern = "organisation_carte/services/units_tests/tests_*.rb"
+	t.pattern = "gestion_commandes/services/units_tests/tests_*.rb"
 end
 
