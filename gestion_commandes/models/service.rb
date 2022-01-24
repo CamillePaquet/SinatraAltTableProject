@@ -3,8 +3,8 @@ module Sample
       class Service
         include Mongoid::Document
   
-        field :nom, :type => String
-        field :plan_table_nom, :type => String
+        field :plan_table, :type => Array
+        field :date, :type => String
 
 
       end
