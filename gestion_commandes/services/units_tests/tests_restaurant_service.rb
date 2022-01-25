@@ -75,7 +75,7 @@ class TestNumber < Test::Unit::TestCase
     restaurant = Restaurant.new("restaurant")
     mockRestaurantRepertoire = MockRestaurantRepertoire.new(options)
     restaurant_service = RestaurantService.new(mockRestaurantRepertoire)
-    assert_equal(restaurant_service.modification_plan_de_table(restaurant, "plat"), "NOT_FOUND")
+    assert_equal(restaurant_service.modification_plan_de_table(restaurant, "plat"), "NOTFOUND")
   end
 
   def test_modification_plan_de_table_nom_plan_table_inconnu
@@ -87,7 +87,7 @@ class TestNumber < Test::Unit::TestCase
     restaurant = Restaurant.new("restaurant")
     mockRestaurantRepertoire = MockRestaurantRepertoire.new(options)
     restaurant_service = RestaurantService.new(mockRestaurantRepertoire)
-    assert_equal(restaurant_service.modification_plan_de_table(restaurant, "plat"), "NOT_FOUND")
+    assert_equal(restaurant_service.modification_plan_de_table(restaurant, "plat"), "NOTFOUND")
   end
 
 end

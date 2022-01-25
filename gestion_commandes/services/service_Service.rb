@@ -64,7 +64,7 @@ module Sample
             end
 
             def ajout_clients options = {}
-                return "NOT_FOUND" if !@repo.restaurant_existe_par_nom? options[:nom_restaurant]
+                return "NOTFOUND" if !@repo.restaurant_existe_par_nom? options[:nom_restaurant]
                 return "BAD_REQUEST" if !@repo.restaurant_a_un_service? options[:nom_restaurant]
                 plan_table = @repo.recuperation_plan_table_service options[:nom_restaurant]
                 return "BAD_REQUEST" if !clients_positifs? options[:clients]

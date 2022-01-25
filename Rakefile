@@ -21,7 +21,9 @@ RSpec::Core::RakeTask.new do |task|
 end
 
 
-
+Rake::TestTask.new do |t|
+	t.pattern = "organisation_carte/services/units_tests/tests_*.rb"
+end
 
 Rake::TestTask.new do |t|
 	t.pattern = "gestion_commandes/services/units_tests/tests_*.rb"

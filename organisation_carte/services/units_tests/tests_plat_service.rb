@@ -134,7 +134,7 @@ class TestNumber < Test::Unit::TestCase
       "quantite": 20,
     }
     plat = Plat.new(plat_attributs)
-    assert_equal(plat_service.modification_quantite_service(plat), "NOT_FOUND")
+    assert_equal(plat_service.modification_quantite_service(plat), "NOTFOUND")
   end  
 
   def test_recuperation_liste_plats

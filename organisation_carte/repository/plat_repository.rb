@@ -38,7 +38,7 @@ module Sample
                     plat.save!
                     return "UPDATED"
                 rescue Mongoid::Errors::DocumentNotFound 
-                    return "NOT_FOUND"
+                    return "NOTFOUND"
                 end
             end
 

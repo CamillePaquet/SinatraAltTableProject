@@ -7,7 +7,7 @@ describe 'Organisation Carte REST API' do
   end
 
   subject { $service }
-  context "POST /altTable/api/restaurant : post un nouveau plan de table" do
+  context "POST /altTable/api/restaurant : post un nouveau restaurant" do
     it {
         restaurant = {
           "nom": "Bistrot"
@@ -18,7 +18,7 @@ describe 'Organisation Carte REST API' do
   end
 
   subject { $service }
-  context "PATCH /altTable/api/restaurant/:nomRestaurant/planTable : post un nouveau plan de table" do
+  context "PATCH /altTable/api/restaurant/:nomRestaurant/planTable : ajoute un plan de table au restaurant" do
     it {
         restaurant = {
           "nom_plan_table": "Plan"

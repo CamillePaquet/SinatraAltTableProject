@@ -43,7 +43,7 @@ module Sample
             end
 
             def modification_quantite_service plat
-                return "NOT_FOUND" if !@repo.plat_existe_par_nom?(plat.nom)
+                return "NOTFOUND" if !@repo.plat_existe_par_nom?(plat.nom)
                 attributs_plat = {
                     :nom => plat.nom,
                     :quantite => plat.quantite,

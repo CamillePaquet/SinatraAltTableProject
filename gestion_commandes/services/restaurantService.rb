@@ -17,8 +17,8 @@ module Sample
             end
 
             def modification_plan_de_table restaurant, nom_plan_table
-                return "NOT_FOUND"if !@repo.restaurant_existe_par_nom?(restaurant.nom)
-                return "NOT_FOUND"if !@repo.plan_table_existe_par_nom?(nom_plan_table)                
+                return "NOTFOUND"if !@repo.restaurant_existe_par_nom?(restaurant.nom)
+                return "NOTFOUND"if !@repo.plan_table_existe_par_nom?(nom_plan_table)                
                 return @repo.modification_plan_table_repertoire(restaurant.nom,nom_plan_table)
             end
         end
