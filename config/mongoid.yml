@@ -1,10 +1,6 @@
-
-   
 development:
   clients:
     default:
-      database: mongoid-sinatra-demo
-      hosts:
-        - localhost:27017
+      uri: mongodb+srv://admin:root@alttable.fhflv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
       options:
-        server_selection_timeout: 1
+        server_selection_timeout: 5
