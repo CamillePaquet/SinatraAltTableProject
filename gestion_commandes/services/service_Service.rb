@@ -18,7 +18,7 @@ module Sample
             end
 
             def creation_service_service nom_restaurant
-                return "NOT_FOUND" if !@repo.restaurant_existe_par_nom? nom_restaurant
+                return "NOTFOUND" if !@repo.restaurant_existe_par_nom? nom_restaurant
                 return "BAD_REQUEST" if !@repo.restaurant_a_un_plan_de_table? nom_restaurant
                 plan_table = @repo.recuperation_plan_table_actif_restaurant nom_restaurant
                 plan_table_array = Array.new
@@ -83,7 +83,6 @@ module Sample
                     nom: options[:nom_restaurant],
                     plan_table: updated_plan_table
                 }
-                puts updated_plan_table
                 return @repo.ajout_clients_repertoir update
             end
 
