@@ -62,17 +62,4 @@ describe 'Gestion commandes service REST API' do
     it { expect(subject).to respond_with_status 400 }
   end
 
-  # subject { $service }
-  # context "PATCH /altTable/api/restaurant/:nomRestaurant/planTable : ajoute un plan de table au alors que des clients sont installés au restaurant" do
-  #   it {
-  #       restaurant = {
-  #         "nom_plan_table": "Plan2"
-  #     }
-  #       expect(subject.patch('/altTable/api/restaurant/Bistrot/planTable',restaurant.to_json)).to be_correctly_sent 
-  #   }
-  #   it { expect(subject).to respond_with_status 400 }
-  # end
-
-
-
 end
